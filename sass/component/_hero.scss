@@ -1,0 +1,58 @@
+
+.front {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--background-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/font.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.hero {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        & .conteiner {
+            text-align: center;
+        }
+    }
+}
+
+
+.hero__title {
+    margin: 0 auto;
+    width: 697px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+}
+
+.hero__btn {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+    text-align: center;
+    color: var(--main-title-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero__text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--main-title-color);
+}
