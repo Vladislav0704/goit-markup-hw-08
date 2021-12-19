@@ -1,3 +1,10 @@
+.work {
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+}
+
 .work__title {
     margin-bottom: 50px;
     font-style: normal;
