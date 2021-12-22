@@ -856,7 +856,7 @@ img {
   color: var(--about-text-color);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .client-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -871,7 +871,7 @@ img {
   width: 100%;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .client-item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
