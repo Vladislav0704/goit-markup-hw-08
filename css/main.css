@@ -624,6 +624,7 @@ img {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
+  text-align: left;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
