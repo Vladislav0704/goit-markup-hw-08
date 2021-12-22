@@ -7,17 +7,27 @@
 
 
 .footer__contein {
-    display: flex;
-    align-items: baseline;
+}
+
+.footer-tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+    }
 }
 
 .footer__flex {
+    & .footer__item {
+        padding-bottom: 20px;
+    }
     display: flex;
     flex-direction: column;
-    margin-right: 70px;
-    & .footer__item {
-        margin-bottom: 20px;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+        margin-bottom: 60px;
     }
+        
 }
 
 .footer__item {
@@ -31,17 +41,12 @@
     }
 }
 
-.logo {
-    margin-bottom: 20px;
+
+.address__item + .address__item {
+    margin-top: 8px;
 }
 
-.contact-list {
-    & .item {
-        margin-bottom: 9px;
-    }
-}
-
- .footer__link {
+.address__link {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -59,11 +64,16 @@
 // --------CONTAIN--------
 
 .contain {
-    margin-right: 93px;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+        margin-bottom: 60px;
+    }
 }
 
 .contein__title {
     margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -74,8 +84,10 @@
 }
 
 .contein__list {
-     display: flex;
-     justify-content: center;
+    @media screen and (max-width: 1199px) {
+    justify-content: center;
+    }
+    display: flex;
 }
 
 
@@ -115,6 +127,12 @@
 
 // --------CONTAIN--------
 
+.exile {
+    @media screen and (max-width: 1199px) {
+    text-align: center;
+    }
+}
+
 .exile__title {
     margin-bottom: 20px;
     font-style: normal;
@@ -127,11 +145,13 @@
 }
 
 .forma {
+    @media screen and (min-width: 1200px) {
     display: flex;
+    }
 }
 
 .forma__item {
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding: 15px;
     width: 358px;
     height: 50px;
@@ -144,6 +164,12 @@
     outline: none;
     &:focus {
         border-color: var(--accent-color);
+    }
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
     }
 }
 
