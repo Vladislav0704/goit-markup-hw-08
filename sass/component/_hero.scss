@@ -1,35 +1,67 @@
 
 .front {
-    max-width: 1600px;
-    height: 600px;
+    // max-width: 480px;
+    // height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--background-color);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/font.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/retina/font-mobile-1x.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &.hero {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        & .conteiner {
-            text-align: center;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image:  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/retina/font-mobile-2x.jpg);
+    }
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/retina/font-tablet-1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image:  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/retina/font-tablet-2x.jpg);
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/retina/font-desktop-1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image:  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/retina/font-desktop-2x.jpg);
         }
     }
 }
 
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    & .conteiner {
+        text-align: center;
+    }
+}
 
 .hero__title {
     margin: 0 auto;
-    width: 697px;
+    width: 360px;
     font-style: normal;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-title-color);
+    @media screen and (min-width: 1200px) {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .hero__btn {
