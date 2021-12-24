@@ -23,37 +23,43 @@
     <!-- HEADER -->
     <header class="header">
         <div class="header__main-nav conteiner">
-            <h1 class="article">Шапка</h1>
-            <a class="header__title" href=""><span class="header__tab">Web</span>Studio</a>
-            <nav>
-                <ul class="header__site-nav">
+            <div class="header__direction">
+                <h1 class="article">Шапка</h1>
+                <a class="header__title" href=""><span class="header__tab">Web</span>Studio</a>
+            </div>
+            <div class="header__direction">
+                <nav>
+                    <ul class="header__site-nav">
+                        <li class="header__item">
+                            <a class="header__list current" href="./index.html">Студия</a></li>
+                        <li class="header__item">
+                            <a class="header__list" href="./portfolio.html">Портфолио</a></li>
+                        <li class="header__item">
+                            <a class="header__list" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__direction">
+                <ul class="header__auth-nav">
                     <li class="header__item">
-                        <a class="header__list current" href="./index.html">Студия</a></li>
+                        <a class="header__list header__list--grey" href="info@devstudio.com">
+                            <svg class="header__icon" width="16" height="12">
+                                <use href="./images/icons.svg#envelope"></use>
+                            </svg>info@devstudio.com</a></li>
                     <li class="header__item">
-                        <a class="header__list" href="./portfolio.html">Портфолио</a></li>
-                    <li class="header__item">
-                        <a class="header__list" href="">Контакты</a></li>
+                        <a class="header__list header__list--grey" href="tel:+380961111111">
+                            <svg class="header__icon" width="10" height="16">
+                                <use href="./images/icons.svg#vector"></use>
+                            </svg>+38 096 111 11 11</a>
+                    </li>
                 </ul>
-            </nav>
-            <ul class="header__auth-nav">
-                <li class="header__item">
-                    <a class="header__list header__list--grey" href="info@devstudio.com">
-                        <svg class="header__icon" width="16" height="12">
-                            <use href="./images/icons.svg#envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li class="header__item">
-                    <a class="header__list header__list--grey" href="tel:+380961111111">
-                        <svg class="header__icon" width="10" height="16">
-                            <use href="./images/icons.svg#vector"></use>
-                        </svg>+38 096 111 11 11</a>
-                </li>
-            </ul>
+            </div>
         </div>
     </header>
     <main>
         <!-- HERO -->
         <section class="front hero">
-            <div class="conteiner">
+            <div class="hero__conteiner">
                 <h2 class="hero__title">Эффективные решения для вашего бизнеса</h2>
                 <button type="button"  class="hero__btn" data-modal-open><span class="hero__text">Заказать услугу</span></button>
             </div>

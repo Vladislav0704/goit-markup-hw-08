@@ -328,9 +328,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__main-nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .header__title {
@@ -359,42 +364,60 @@ img {
 }
 
 .header__site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
+  display: none;
 }
 
-.header__site-nav .header__item {
-  display: block;
-  padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .header__site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .header__site-nav .header__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.header__site-nav .header__item + .header__item {
-  margin-left: 40px;
+@media screen and (min-width: 1200px) {
+  .header__site-nav {
+    margin-left: 93px;
+  }
 }
 
 .header__auth-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+  display: none;
 }
 
-.header__auth-nav .header__item {
-  padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__auth-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header__auth-nav .header__item:last-child {
+    margin-top: 10px;
+  }
 }
 
-.header__auth-nav + .header__item {
-  padding-left: 40px;
-}
-
-.header__auth-nav .header__list--grey {
-  color: var(--main-text-color);
+@media screen and (min-width: 1200px) {
+  .header__auth-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 305px;
+  }
+  .header__auth-nav .header__item:last-child {
+    margin-left: 30px;
+  }
 }
 
 .header__list {
@@ -480,7 +503,7 @@ img {
   }
 }
 
-.conteiner {
+.hero__conteiner {
   text-align: center;
 }
 
@@ -1182,18 +1205,33 @@ img {
   fill: var(--main-title-color);
 }
 
+.section__portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 320px) {
+  .services {
+    margin-bottom: 40px;
+  }
+}
+
 .services__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.services__list .services__item :nth-child(-n +4) {
-  margin-right: 8px;
+.services__item + .services__item {
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .services__item:nth-last-child(-n + 2) {
+    margin-top: 15px;
+  }
 }
 
 .services__list .button {
@@ -1292,19 +1330,28 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: -30px;
 }
 
 .order__item {
-  width: 370px;
-  margin-right: 30px;
-}
-
-.order__item:nth-child(-n + 6) {
+  width: 100%;
   margin-bottom: 30px;
 }
 
-.order__item:nth-child(3n) {
-  margin-right: 0px;
+@media screen and (min-width: 768px) {
+  .order__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .order__item {
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
+    margin: 15px;
+  }
 }
 
 .order__item:hover {
@@ -1358,6 +1405,7 @@ img {
 }
 
 .parter__item {
+  text-align: left;
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -1367,6 +1415,7 @@ img {
 }
 
 .parter__text {
+  text-align-last: left;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
