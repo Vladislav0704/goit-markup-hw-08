@@ -18,12 +18,18 @@
     // margin-bottom: 50px;
 }
 
-.services__item + .services__item {
-    margin-left: 8px;
+.services__item:not(:last-child) {
+    margin-right: 8px;
 }
 
 .services__item:nth-last-child(-n + 2) {
-    @media screen and (max-width:767px) {
+    @media screen and (min-width:400px) and (max-width:767px) {
+    margin-top: 15px;
+    }
+}
+
+.services__item:nth-last-child(-n + 3) {
+    @media screen and (min-width:320px) and (max-width:399px) {
     margin-top: 15px;
     }
 }

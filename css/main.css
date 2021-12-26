@@ -1407,12 +1407,18 @@ img {
       flex-wrap: wrap;
 }
 
-.services__item + .services__item {
-  margin-left: 8px;
+.services__item:not(:last-child) {
+  margin-right: 8px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 400px) and (max-width: 767px) {
   .services__item:nth-last-child(-n + 2) {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 399px) {
+  .services__item:nth-last-child(-n + 3) {
     margin-top: 15px;
   }
 }
