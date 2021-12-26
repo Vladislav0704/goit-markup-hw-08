@@ -76,7 +76,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color:var(--about-text-color);
+    color:var(--main-text-color);
     position: relative;
     transition: color 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -92,4 +92,60 @@
     vertical-align: middle;
     margin-right: 10px;
     fill: currentColor;
+}
+
+.open-mob-menu {
+    display: none;
+    @media screen and (max-width: 767px) {
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+        background-color:var(--main-title-color);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: fill 250ms linear;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+    }
+}
+
+.close-mob-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color:var(--main-title-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: fill 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.mob-menu {
+    position: fixed;
+    background-color: var(--main-title-color);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.mob-menu__site-nav {
+    padding-top: 48px;
+    padding-left: 40px;
 }
