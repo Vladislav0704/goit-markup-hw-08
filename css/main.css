@@ -426,7 +426,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--about-text-color);
   position: relative;
   -webkit-transition: color 250ms;
   transition: color 250ms;
@@ -436,6 +436,10 @@ img {
 
 .header__list:focus, .header__list:hover {
   color: var(--accent-color);
+}
+
+.header__list--grey {
+  color: var(--main-text-color);
 }
 
 .header__icon {
@@ -505,6 +509,16 @@ img {
 }
 
 .mob-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   background-color: var(--main-title-color);
   width: 100vw;
@@ -515,8 +529,67 @@ img {
 }
 
 .mob-menu__site-nav {
-  padding-top: 48px;
-  padding-left: 40px;
+  margin-top: 48px;
+  margin-left: 40px;
+}
+
+.mob-menu__site-nav .mob-menu__list {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--about-text-color);
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__auth-nav {
+  margin-left: 40px;
+  margin-bottom: 64px;
+}
+
+.mob-menu__auth-nav .mob-menu__item:not(:last-child) .mob-menu__list {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu__auth-nav .mob-menu__list {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu__social {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mob-menu__social .mob-menu__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-menu__social .mob-menu__list {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--accent-color);
+}
+
+.mob-menu__list {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu__list:focus, .mob-menu__list:hover {
+  color: var(--accent-color);
 }
 
 .front {
