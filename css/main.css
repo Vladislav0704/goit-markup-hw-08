@@ -693,17 +693,17 @@ img {
   color: var(--main-title-color);
 }
 
+@media screen and (min-width: 400px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero__title {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
-  }
-}
-
-@media screen and (min-width: 400px) {
-  .hero__title {
-    width: 360px;
   }
 }
 
